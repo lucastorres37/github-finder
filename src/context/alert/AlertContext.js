@@ -3,8 +3,10 @@ import alertReducer from './AlertReducer';
 
 const AlertContext = createContext()
 
-export const AlertProvider =({children}) => {
+export const AlertProvider = ({children}) => {
     const initialState = null
+    
+    const [state, dispatch] = useReducer(alertReducer, initialState)
 
     // Set an alert
     const setAlert = (msg, type) => {
@@ -16,9 +18,6 @@ export const AlertProvider =({children}) => {
         
         setTimeout(() => dispatch({ type: 'REMOVE_ALERT'}), 3000)
     }
-
-
-    const [state, dispatch] = useReducer(alertReducer.initialState)
 
     return (
         <AlertContext.Provider value={{alert: state, setAlert}}>
