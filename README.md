@@ -1,6 +1,6 @@
 # Github Finder
 
-App to search Github users and display their info. The project is part of the React Front To Back Udemy course by Brad Traversy.
+App to search Github users and display their info. The project is part of the React Front To Back Udemy course by [Brad Traversy](https://github.com/bradtraversy).
 
 ---
 
